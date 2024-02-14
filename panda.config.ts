@@ -1,6 +1,13 @@
-import { defineConfig } from "@pandacss/dev";
+import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
+
+const globalStyle = defineGlobalStyles({
+  div: {
+    color: "gray.900",
+  },
+});
 
 export default defineConfig({
+  globalCss: globalStyle,
   // Whether to use css reset
   preflight: true,
 
@@ -12,7 +19,15 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      tokens: {
+        colors: {
+          testYellow: {
+            value: "#7be43133",
+          },
+        },
+      },
+    },
   },
 
   // The output directory for your css system
