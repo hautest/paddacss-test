@@ -27,6 +27,23 @@ export default defineConfig({
           },
         },
       },
+      recipes: {
+        flex: {
+          base: {
+            display: "flex",
+          },
+          variants: {
+            direct: {
+              raw: {
+                flexDirection: "row",
+              },
+              column: {
+                flexDirection: "column",
+              },
+            },
+          },
+        },
+      },
     },
   },
 
