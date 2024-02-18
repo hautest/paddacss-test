@@ -8,7 +8,6 @@ const globalStyle = defineGlobalStyles({
 
 export default defineConfig({
   globalCss: globalStyle,
-  syntax: "template-literal",
   jsxFramework: "react",
   // Whether to use css reset
   preflight: true,
