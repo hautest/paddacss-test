@@ -17,6 +17,7 @@ export default defineConfig({
 
   // Files to exclude
   exclude: [],
+  jsxStyleProps: "minimal",
 
   // Useful for theme customization
   theme: {
