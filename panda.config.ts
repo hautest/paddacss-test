@@ -1,9 +1,29 @@
-import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
+import { defineConfig, defineGlobalStyles, defineRecipe } from "@pandacss/dev";
 
 const globalStyle = defineGlobalStyles({
   div: {
     color: "gray.900",
   },
+});
+
+const buttonRecipe = defineRecipe({
+  className: "button",
+  base: {
+    backgroundColor: "red.400",
+    height: "40px",
+    width: "100px",
+  },
+  variants: {
+    variant: {
+      a: {
+        backgroundColor: "blue.400",
+      },
+      b: {
+        backgroundColor: "green.400",
+      },
+    },
+  },
+  jsx: ["Button", "PageButton"],
 });
 
 export default defineConfig({
@@ -45,6 +65,7 @@ export default defineConfig({
             },
           },
         },
+        button: buttonRecipe,
       },
     },
   },

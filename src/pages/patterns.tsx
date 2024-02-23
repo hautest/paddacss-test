@@ -23,7 +23,7 @@ export type BoxProps<C extends ElementType> = {
   css?: SystemStyleObject;
 } & Omit<ComponentPropsWithRef<C>, "as">;
 
-const Box = <T extends ElementType = "div">({
+export const Box = <T extends ElementType = "div">({
   as,
   css,
   className,
